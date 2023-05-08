@@ -1,0 +1,75 @@
+.register{
+    height:100vh;
+    background-color: rgb(159, 92, 222);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    
+    .card{
+        width:50%;
+        display:flex;
+        flex-direction: row-reverse;
+        background-color: white;
+        border-radius:10px;
+        min-height:600px;
+        overflow: hidden;
+        .leftside{
+            display:flex;
+            flex-direction: column;
+            gap:30px;
+            padding:50px;
+            color:white;
+            flex:1;
+            background:linear-gradient(rgba(105, 10, 134, 0.5),rgba(0,0,0,0.5)), url("https://images.pexels.com/photos/1387037/pexels-photo-1387037.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") center;
+            background-size: cover;
+            h1{
+                font-size:100px;
+                line-height:100px;
+            }
+            p{}
+            span{
+                font-size: 14px;
+            }
+            button{
+                width:50%;
+                padding: 10px;
+                border:none;
+                color:purple;
+                background-color: white;
+                font-weight: bold;
+                cursor:pointer;
+            }
+        }
+        .rightside{
+            flex:1;
+            padding:50px;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            justify-content: center;
+            h1{
+                color:#555;
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                
+                input{
+                    border: none;
+                    border-bottom: 1px solid lightgrey;
+                    padding: 20px 10px;
+                }
+                button{
+                    width: 50%;
+                    padding: 10px;
+                    border:none;
+                    background-color: #938eef;
+                    color:white;
+                    font-weight: bold;
+                    cursor:pointer;
+                }
+            }
+        }
+    }
+}
