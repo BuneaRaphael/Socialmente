@@ -4,6 +4,7 @@ import "./comments.scss";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { makeRequest } from "../../axios.js";
 import moment from "moment";
+import { Link } from "react-router-dom";
 
 const Comments = ({ postId }) => {
   const { currentUser } = useContext(AuthContext);
@@ -36,7 +37,7 @@ const Comments = ({ postId }) => {
   return (
     <div className="comments">
       <div className="write">
-        <img src={currentUser.profilePic} alt="" />
+        <img src={"/upload/" + currentUser.profilePic} alt="" />
         <input
           type="text"
           placeholder="Write a comment"
@@ -49,9 +50,11 @@ const Comments = ({ postId }) => {
         ? "loading"
         : data.map((comment) => (
             <div className="comment">
-              <img src={comment.profilePic} alt="" />
+              <img src={"/upload/" + comment.profilePic} alt="" />
               <div className="info">
-                <span>{comment.name}</span>
+                <Link to={"/profile/" + comment.userId}>
+                  <span>{comment.name}</span>
+                </Link>
                 <p>{comment.desc}</p>
               </div>
               <span className="date">

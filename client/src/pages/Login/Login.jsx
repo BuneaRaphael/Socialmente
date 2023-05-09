@@ -31,7 +31,7 @@ const Login = () => {
     <div className="login">
       <div className="card">
         <div className="leftside">
-          <h1>Hello World</h1>
+          <h1>Social Mente</h1>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab ipsam
             labore eligendi amet, reiciendis soluta?

@@ -33,6 +33,7 @@ const Profile = () => {
         return res.data;
       })
   );
+
   const queryClient = useQueryClient();
   const mutation = useMutation(
     (following) => {
